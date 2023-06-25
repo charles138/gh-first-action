@@ -3,7 +3,7 @@ name: First Batch Workflow
 on: 
   push:
     branches:
-      - 'first-branch*'
+      - 'first-branch'
 jobs:
   first-jobs:
     runs-on: ubuntu-latest
@@ -20,7 +20,7 @@ jobs:
         run: |
           pwd
           ls -lah
-          echo $SGITHUB_SHA
+          cat first-batch.txt
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
-          echo ${{ secrets.GITHUB_TOKEN }}
+          # echo ${{ secrets.GITHUB_TOKEN }}
