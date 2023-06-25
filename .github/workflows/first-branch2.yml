@@ -6,7 +6,7 @@ on:
       - 'first-branch'
   pull_request:  
     branches:
-      - 'first-branch'
+      - 'main'
 
 jobs:
   first-jobs:
@@ -14,7 +14,8 @@ jobs:
     steps:
       - name: Echo branch, checkout repo, and list files
         run: |
-          echo ${GITHUB_REF##*/}
+          echo $GITHUB_REF##*/
+          echo $GITHUB_EVENT_NAME
           echo "first-branch - first brach"
           
       - name: Checkout repo
@@ -27,5 +28,4 @@ jobs:
           cat first-batch.txt
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
-          echo $GITHUB_EVENT_NAME
           # echo ${{ secrets.GITHUB_TOKEN }}
