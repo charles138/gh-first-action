@@ -1,0 +1,32 @@
+name: First Batch Workflow
+
+on: 
+  pull_request:
+    types:
+      - closed  
+    branches:
+      - 'main'
+
+jobs:
+  first-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo branch, checkout repo, and list files
+        run: |
+          echo $GITHUB_REF_TYPE
+          echo $GITHUB_REF
+          echo $GITHUB_REF##*/
+          echo $GITHUB_EVENT_NAME
+          echo "first-branch - first brach"
+          
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: pull_request - closed List Files After Checkout
+        run: |
+          pwd
+          ls -lah
+          cat ./.github/workflows/first-branch2.yml
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          # echo ${{ secrets.GITHUB_TOKEN }}
