@@ -8,5 +8,7 @@ jobs:
   first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo from first-branch
-        run: echo "first-branch - first brach"
+      - name: Echo
+        run: |
+          echo ${GITHUB_REF##*/}
+          echo "first-branch - first brach"
