@@ -27,7 +27,7 @@ jobs:
         run: |
           pwd
           ls -lah
-          cat ./.github/workflows/first-branch2.yml
+          ls ./.github/workflows/first-branch2.yml
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
           # echo ${{ secrets.GITHUB_TOKEN }}
