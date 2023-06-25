@@ -8,5 +8,5 @@ jobs:
   first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo from first-branch
-        run: echo "First brach"
+      - name: Echo from main
+        run: echo "main - first brach"
