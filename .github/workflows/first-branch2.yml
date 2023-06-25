@@ -1,0 +1,14 @@
+name: First Batch Workflow
+
+on: 
+  push:
+    branches:
+      - 'first-branch'
+jobs:
+  first-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo ${GITHUB_REF##*/}
+          echo "first-branch - first brach"
