@@ -23,4 +23,5 @@ jobs:
           cat first-batch.txt
           echo $GITHUB_REPOSITORY
           echo $GITHUB_WORKSPACE
+          echo $GITHUB_EVENT_NAME
           # echo ${{ secrets.GITHUB_TOKEN }}
