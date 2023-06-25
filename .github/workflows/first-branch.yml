@@ -3,7 +3,8 @@ name: First Batch Workflow
 on: 
   push:
     branches:
-      - 'xxxxxfirst-branch'
+      - 'xxxfirst-branch'
+
 jobs:
   first-jobs:
     runs-on: ubuntu-latest
