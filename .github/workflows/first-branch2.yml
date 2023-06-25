@@ -8,7 +8,7 @@ jobs:
   first-jobs:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo
+      - name: Echo branch, checkout repo, and list files
         run: |
           echo ${GITHUB_REF##*/}
           echo "first-branch - first brach"
