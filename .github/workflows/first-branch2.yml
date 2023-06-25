@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - 'first-branch'
+  pull_request:  
+    branches:
+      - 'first-branch'
+
 jobs:
   first-jobs:
     runs-on: ubuntu-latest
